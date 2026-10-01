@@ -42,6 +42,31 @@ cv2.imshow("texto 0099", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
+print("Thresholding 0099")
+
+img = cv2.imread('fresa.jpg',0)
+
+ret,thr1 = cv2.threshold(img,127,255,cv2.THRESH_BINARY)
+ret,thr2 = cv2.threshold(img,127,255,cv2.THRESH_BINARY_INV)
+ret,thr3 = cv2.threshold(img,127,255,cv2.THRESH_TRUNC)
+ret,thr4 = cv2.threshold(img,127,255,cv2.THRESH_TOZERO)
+ret,thr5 = cv2.threshold(img,127,255,cv2.THRESH_TOZERO_INV)
+
+cv2.imshow('BINARY',thr1)
+cv2.imshow('BINARY_INV',thr2)
+cv2.imshow('TRUNC',thr3)
+cv2.imshow('TOZERO',thr4)
+cv2.imshow('TOZERO_INV',thr5)
+
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+# Abre la ventana con la imagen
+cv2.imshow("Thresholding 0099", img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
 print("Trackbars 0099")
 
 def on_trackbar(val):
@@ -73,31 +98,6 @@ cv2.destroyAllWindows()
 
 # Abre la ventana con la imagen
 cv2.imshow("Trackbars 0099", img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
-print("Thresholding 0099")
-
-img = cv2.imread('fresa.jpg',0)
-
-ret,thr1 = cv2.threshold(img,127,255,cv2.THRESH_BINARY)
-ret,thr2 = cv2.threshold(img,127,255,cv2.THRESH_BINARY_INV)
-ret,thr3 = cv2.threshold(img,127,255,cv2.THRESH_TRUNC)
-ret,thr4 = cv2.threshold(img,127,255,cv2.THRESH_TOZERO)
-ret,thr5 = cv2.threshold(img,127,255,cv2.THRESH_TOZERO_INV)
-
-cv2.imshow('BINARY',thr1)
-cv2.imshow('BINARY_INV',thr2)
-cv2.imshow('TRUNC',thr3)
-cv2.imshow('TOZERO',thr4)
-cv2.imshow('TOZERO_INV',thr5)
-
-
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
-# Abre la ventana con la imagen
-cv2.imshow("Thresholding 0099", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
